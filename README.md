@@ -73,8 +73,8 @@ function onHangup() {
 
 var registerParams = {
     forceRTMP           : true,
-    wsUrl               : 'ws://10.26.0.41:8080',
-    rtmpUrl             : 'rtmp://10.26.0.41/sip',
+    wsUrl               : 'ws://pbx.raffel.nl:8080',
+    rtmpUrl             : 'rtmp://pbx.raffel.nl/sip',
     realm               : document.getElementById('realm').value,
     privateIdentity     : document.getElementById('privateIdentity').value,
     publicIdentity      : document.getElementById('publicIdentity').value,
