@@ -84,7 +84,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>Welcome to the Kazoo Client Demo</h1>
+		<h1>Welcome to the Raffel WebRTC demo</h1>
 		<div id="loginForm" class="demo-block" style="display: none;">
 			<form>
 				Private Identity: <input type="text" id="privateIdentity" value="webphone"><br>
@@ -99,7 +99,7 @@
 		<div id="divLoggedIn" class="demo-block" style="display: none;">
 			Logged In
 			<div>
-				<input type="text" id="destination" placeholder="sip:2222@webdev.realm" value="sip:2002@myrealm.com"></input>
+				<input type="text" id="destination" placeholder="sip:0768200110" value="sip:0768200110"></input>
 				<button id="call" onClick="call()">Call</button>
 			</div>
 		</div>
@@ -174,8 +174,8 @@
 
 			function login(){
 				var kazooParams = {
-					wsUrl: 'ws://Kazoo WS API/',
-					rtmpUrl: 'rtmp://Kazoo RTMP Gateway /sip', // Optional
+					wsUrl: 'ws://pbx.raffel.nl/',
+					rtmpUrl: '', // Optional
 					realm: document.getElementById('realm').value,
 					privateIdentity: document.getElementById('privateIdentity').value,
 					publicIdentity: document.getElementById('publicIdentity').value,

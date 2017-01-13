@@ -43,9 +43,9 @@ be able to place and receive calls!
 
 In order to register to some SIP credentials, we need to use the `kazoo.register` function, the expected parameters are the following:
 
-- `wsUrl`: Web Socket Server URL (e.g: `ws://10.26.0.41:8080`)
-- `rtmpUrl`: RTMP Server URL (e.g: `rtmp://10.26.0.41/sip`)
-- `realm`: SIP Realm (Realm linked to your Kazoo account, e.g: `d218ds.sip.2600hz.com`)
+- `wsUrl`: Web Socket Server URL (e.g: `ws://pbx.raffel.nl:8080`)
+- `rtmpUrl`: RTMP Server URL (e.g: `rtmp://pbx.raffel.nl/sip`)
+- `realm`: SIP Realm (Realm linked to your account, e.g: `d218ds.sip.2600hz.com`)
 - `privateIdentity`: SIP Username (e.g: `user_31dsajsjds`)
 - `publicIdentity`: Full SIP Address (e.g: `sip:user_31dsajsjds@ d218ds.sip.2600hz.com`)
 - `password`: SIP Password (e.g: `23bf1f9wwdslw2`)
@@ -119,7 +119,7 @@ The kazoo object has 7 accessible methods:
 
 - `init`: Method to initialize the Library, see Example 1
 - `register`: Method to register using some SIP credentials, see Example 2
-- `connect`: takes a SIP URL as the only parameter, and will try to call the following address (e.g: kazoo.connect(`sip:2222@dd21d.sip.2600hz.com`) )
+- `connect`: takes a SIP URL as the only parameter, and will try to call the following address (e.g: kazoo.connect(`sip:0768200110@demo.pbx.raffel.nl`) )
 - `hangup`: no arguments needed, will hangup the current call. (e.g: kazoo.hangup());
 - `sendDTMF`: takes a character from this list 0,1,2,3,4,5,6,7,8,9,0,*,#, as a parameter and send it as a DTMF to the platform (e.g: `kazoo.sendDTMF('2')`);
 - `logout`: Will unregister the browser from the platform (e.g: kazoo.logout());
@@ -131,5 +131,3 @@ The kazoo object has 7 accessible methods:
 - `monitorConnectivity`: takes a Boolean as a parameter, which is true by default. This function allows to enable (true) or disable (false) the monitoring of your network connectivity. It is enabled by default, and disabling it will prevent the library from knowing when your connectivity has been loss, hence impairing the auto-reconnect feature. This is especially used for recovering from sleep/hibernate mode.
 Using this, you should now be able to create some cool applications using softphones in your browser!
 
-## Contact
-If you have any question or remark about the library or its documentation, feel free to come talk to us on IRC #2600hz on FreeNode.
