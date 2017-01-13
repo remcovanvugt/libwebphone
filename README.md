@@ -45,9 +45,9 @@ In order to register to some SIP credentials, we need to use the `kazoo.register
 
 - `wsUrl`: Web Socket Server URL (e.g: `ws://pbx.raffel.nl:8080`)
 - `rtmpUrl`: RTMP Server URL (e.g: `rtmp://pbx.raffel.nl/sip`)
-- `realm`: SIP Realm (Realm linked to your account, e.g: `d218ds.sip.2600hz.com`)
+- `realm`: SIP Realm (Realm linked to your account, e.g: `demo.pbx.raffel.nl`)
 - `privateIdentity`: SIP Username (e.g: `user_31dsajsjds`)
-- `publicIdentity`: Full SIP Address (e.g: `sip:user_31dsajsjds@ d218ds.sip.2600hz.com`)
+- `publicIdentity`: Full SIP Address (e.g: `sip:user_31dsajsjds@demo.pbx.raffel.nl`)
 - `password`: SIP Password (e.g: `23bf1f9wwdslw2`)
 - `onIncoming`: JavaScript callback called once an incoming call has been detected. It takes one argument, a call object that has 2 methods: accept, and reject (which will either accept or reject the call) and one attribute: callerName (which will give you the callerId for this incoming call).
 - `onConnected`: OPTIONAL, JavaScript function called by the library once the user is successfully registered
@@ -123,7 +123,7 @@ The kazoo object has 7 accessible methods:
 - `hangup`: no arguments needed, will hangup the current call. (e.g: kazoo.hangup());
 - `sendDTMF`: takes a character from this list 0,1,2,3,4,5,6,7,8,9,0,*,#, as a parameter and send it as a DTMF to the platform (e.g: `kazoo.sendDTMF('2')`);
 - `logout`: Will unregister the browser from the platform (e.g: kazoo.logout());
-- `transfer`: takes a SIP URL as the only parameter, and will try to call the following address (e.g: kazoo.transfer(`sip:2222@sdsdd.sip.2600hz.com`) ).
+- `transfer`: takes a SIP URL as the only parameter, and will try to call the following address (e.g: kazoo.transfer(`sip:202@demo.pbx.raffel.nl`) ).
 - `muteMicrophone`: takes a boolean as a parameter (true to mute, false to unmute), as well as two callbacks for success and error (e.g. kazoo.muteMicrophone(true, success, error); ).]
 - `reconnect`: Attempts to re-register the device with the same parameters originally provided to the register function and sends a reconnecting_notification. This function gets called by the auto-reconnect feature.
 - `startAutoReconnect`: triggers the auto-reconnect using the reconnectMaxAttempts and reconnectDelay values provided in the register parameters. You should not have to call this method as it will be automatically called when getting disconnected (except when the registration is getting overridden).
